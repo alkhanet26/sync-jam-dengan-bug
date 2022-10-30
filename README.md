@@ -24,6 +24,9 @@
    ```
    * */6 * * * sh /sbin/jam.sh
    ```
+   ini artinya setiap 6 jam sekali ``jam.sh`` dijalanin untuk restart tunnel
+   
+   
 # Developer
 1. alknanet
 2. vito harhari
