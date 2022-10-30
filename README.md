@@ -12,7 +12,7 @@
    ```
 2. paste command dibawah ini untuk menginstall script jam.sh
    ```
-   wget --no-check-certificate "https://github.com/alkhanet26/sync-jam-dengan-bug/edit/main/jam.sh" -O /sbin/jam.sh && chmod +x /sbin/jam.sh
+   wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/sync-jam-dengan-bug/main/jam.sh" -O /sbin/jam.sh && chmod +x /sbin/jam.sh
    ```
 3. buka ``file browser`` via luci atau ``winscp`` di folder ``"/sbin/jam.sh"``
 4. ganti bug ``www.domain.com`` nya sesuai paket atau dengan ``ip modem`` kalian
