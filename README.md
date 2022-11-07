@@ -1,4 +1,4 @@
-# sync-jam-dengan-bug
+# Sync-Jam-dengan-Bug / IP Modem
 1. Auto synchronize jam openwrt dengan bug
 2. Restart tunnel
    - Openclash
