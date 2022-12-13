@@ -16,6 +16,9 @@
    ```
 3. buka ``file browser`` via luci atau ``winscp`` di folder ``"/sbin/jam.sh"``
 4. ganti bug ``www.domain.com`` nya sesuai paket atau dengan ``ip modem`` kalian
+   Cari tulisan ``curl -i www.bugdomain.com``ganti ``www.bugdomain.com`` dengan bug paket yang sesuai dengan isp
+   kalau menggunakan 0p0k dibekalang domain diberi port ex: ``www.bugdomain.com:443``
+  
 5. masukan di ``rc.local`` atau ``luci -> system - startup - local``
    ```
    sh /sbin/jam.sh
@@ -25,6 +28,8 @@
    * */6 * * * sh /sbin/jam.sh
    ```
    ini artinya setiap 6 jam sekali ``jam.sh`` dijalanin untuk restart tunnel
+7. Untuk mencari domain bug yang cocok silahkan ketik dulu di terminal ``curl -i www.bugdomain.com`` atau ``curl -i www.bugdomain.com:443``
+   ex : ``curl -i time.google.com`` lihat jika ada respon date maka domain tersebut bisa dipakai
    
    
 # Developer
