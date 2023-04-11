@@ -9,7 +9,7 @@ logger "jam.sh : Stopping Tunnel"
 /etc/init.d/openclash stop
 /etc/init.d/passwall stop
 
-    curl -i { $bug } | grep Date > /tmp/date
+    curl -i ${bug} | grep Date > /tmp/date
     
     day=$(cat /tmp/date | cut -b 12-13)
     month=$(cat /tmp/date | cut -b 15-17)
@@ -62,8 +62,8 @@ logger "jam.sh : Stopping Tunnel"
 
 date -u -s $year.$month.$day-$time
 
-echo -e Jam.sh : "Anda Melakukan Sync dengan domain : { $bug }"
-logger Jam.sh : "Anda Melakukan Sync dengan domain : { $bug }"
+echo -e Jam.sh : "Anda Melakukan Sync dengan domain : ${bug}"
+logger Jam.sh : "Anda Melakukan Sync dengan domain : ${bug}"
 
 echo -e "jam.sh : Waiting restarting tunnel"
 logger "jam.sh : Waiting restarting tunnel"
