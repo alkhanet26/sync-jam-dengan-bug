@@ -21,11 +21,11 @@
   
 5. masukan di ``rc.local`` atau ``luci -> system - startup - local``
    ```
-   sh /sbin/jam.sh
+   sh /sbin/jam.sh google.com
    ```
 6. jika ingin melakukan restart tunnel dengan ``jam.sh`` di crontabs ketikan di ``luci->system->schedule task``
    ```
-   * */6 * * * sh /sbin/jam.sh
+   * */6 * * * sh /sbin/jam.sh google.com
    ```
    ini artinya setiap 6 jam sekali ``jam.sh`` dijalanin untuk restart tunnel
 7. Untuk mencari domain bug yang cocok silahkan ketik dulu di terminal ``curl -i www.bugdomain.com`` atau ``curl -i www.bugdomain.com:443``
