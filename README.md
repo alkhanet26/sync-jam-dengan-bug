@@ -20,9 +20,9 @@
    ```
    sh /sbin/jam.sh google.com
    ```
-5. jika ingin melakukan restart tunnel dengan ``jam.sh`` di crontabs ketikan di ``luci->system->schedule task``
+5. jika ingin melakukan restart tunnel dengan ``jam.sh`` dan sebelum nya ada pengecekan dulu koneksi dari ``modem`` ke ``bug`` yg dituju di crontabs ketikan di ``luci->system->schedule task``
    ```
-   * */6 * * * sh /sbin/jam.sh google.com
+   * */6 * * * sh /sbin/ping.sh google.com
    ```
    ini artinya setiap 6 jam sekali ``jam.sh`` dijalanin untuk restart tunnel
 6. Untuk mencari domain bug yang cocok silahkan ketik dulu di terminal ``curl -i www.bugdomain.com`` atau ``curl -i www.bugdomain.com:443``
