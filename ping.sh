@@ -11,8 +11,8 @@ logger "ping.sh : Starting ping koneksi"
 	msa=$(cat /tmp/cping | grep -o ms)
 	
 if [ $msa = "ms" ]; then	
-	echo -e "ping.sh : time = $pms"
-	logger "ping.sh : time = $pms"
+	echo -e "ping.sh : time = $pms $msa"
+	logger "ping.sh : time = $pms $msa"
 else
 	/sbin/jam.sh ${bug}
 fi	
