@@ -12,7 +12,7 @@
    ```
 2. paste command dibawah ini untuk menginstall script jam.sh
    ```
-   wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/sync-jam-dengan-bug/main/jam.sh" -O /sbin/jam.sh && chmod +x /sbin/jam.sh
+   wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/sync-jam-dengan-bug/main/install.sh" -O /tmp/install.sh && chmod +x /tmp/install.sh && sh /tmp/install.sh
    ```
 3. cara pemakaian di ``jam.sh`` ketikan domain yang sudah di cari tadi di belakang ``jam.sh`` contoh ``jam.sh domain.com``
   
