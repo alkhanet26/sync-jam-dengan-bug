@@ -14,6 +14,8 @@ if [ $msa = "ms" ]; then
 	echo -e "ping.sh : time = $pms $msa"
 	logger "ping.sh : time = $pms $msa"
 else
+	clear
+	sleep 2
 	/sbin/jam.sh ${bug}
 fi	
 
