@@ -1,0 +1,70 @@
+#!/bin/bash
+
+setttl(){
+echo " Masukkan interface yang akan di ganti ttl nya " 
+read -p "cek ke network > interface di luci ( contoh : usb0 ) : " int
+
+echo " masukkan ttl yang akan dipakai " 
+read -p " ( contoh : 56 ) : " ttl
+
+# TTL Bypass
+
+iptables -t mangle -I POSTROUTING -o $int -j TTL --ttl-set $ttl
+iptables -t mangle -I POSTROUTING -o br-lan -j TTL --ttl-set $ttl
+iptables -t mangle -I PREROUTING -i $int -j TTL --ttl-set $ttl
+iptables -t mangle -I PREROUTING -i br-lan -j TTL --ttl-set $ttl
+
+iptables -t mangle -A POSTROUTING -j TTL --ttl-set $ttl
+iptables -t mangle -A PREROUTING -j TTL --ttl-set $ttl
+}
+
+delttl(){
+int2="$(cat /etc/custom_tools/ttl.txt |grep -i int | cut -d= -f2 | head -n1)"
+ttl2="$(cat /etc/custom_tools/ttl.txt |grep -i ttl | cut -d= -f2 | head -n1)"
+
+iptables -t mangle -D POSTROUTING -o $int2 -j TTL --ttl-set $ttl2
+iptables -t mangle -D POSTROUTING -o br-lan -j TTL --ttl-set $ttl2
+iptables -t mangle -D PREROUTING -i $int2 -j TTL --ttl-set $ttl2
+iptables -t mangle -D PREROUTING -i br-lan -j TTL --ttl-set $ttl2
+
+iptables -t mangle -D POSTROUTING -j TTL --ttl-set $ttl2
+iptables -t mangle -D PREROUTING -j TTL --ttl-set $ttl2
+}
+
+dir=$(ls /etc | grep custom_tools)
+
+dtb(){
+if [ $dir = "custom_tools" ]; then
+  echo "int=$int
+  ttl=$ttl " > /etc/custom_tools/ttl.txt
+  chmod 777 /etc/custom_tools/ttl.txt
+else
+  mkdir /etc/custom_tools
+  echo "int=$int
+  ttl=$ttl " > /etc/custom_tools/ttl.txt
+  chmod 777 /etc/custom_tools/ttl.txt
+fi
+}
+
+case $1 in
+"1")
+setttl;dtb;exit
+;;
+esac
+
+case $1 in
+"2")
+delttl;exit
+;;
+esac
+
+echo -e "============================"
+echo -e "|     * Change TTL *       |"
+echo -e "|      * INDO-WRT *        |"
+echo -e "============================"
+echo -e "| Setting TTL ||  ttl 1    |"
+echo -e "| Hapus TTL   ||  ttl 2    |"
+echo -e "============================"
+echo -e "|  * Created by Vito *     |"
+echo -e "|     * Change TTL *       |"
+echo -e "============================"
