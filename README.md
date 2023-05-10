@@ -24,8 +24,8 @@
    ```
    * */6 * * * sh /sbin/ping.sh google.com
    ```
-   ini artinya setiap 6 jam sekali ``jam.sh`` dijalanin untuk restart tunnel
-6. Untuk mencari domain bug yang cocok silahkan ketik dulu di terminal ``curl -i www.bugdomain.com`` atau ``curl -i www.bugdomain.com:443``
+   ini artinya setiap 6 jam sekali ``ping.sh`` dijalanin untuk mengecek koneksi internet jika tidak ada replya maka ``jam.sh`` dijalankan restart tunnel
+6. Untuk mencari domain bug yang cocok silahkan ketik dulu di terminal ``curl -i www.bugdomain.com`` atau ``curl -i www.bugdomain.com:443`` atau bug ip ``curl -i bug_ip:443``
    ex : ``curl -i time.google.com`` lihat jika ada respon date maka domain tersebut bisa dipakai
    ![image](https://user-images.githubusercontent.com/92195275/207335985-73199713-f1fd-4758-9ac5-d66a42966926.png)
    
