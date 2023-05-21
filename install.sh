@@ -6,6 +6,5 @@ echo -e "Downloading Binaries"
 wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/sync-jam-dengan-bug/main/jam.sh" -O /sbin/jam.sh && chmod +x /sbin/jam.sh
 wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/sync-jam-dengan-bug/main/ping.sh" -O /sbin/ping.sh && chmod +x /sbin/ping.sh
 wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/sync-jam-dengan-bug/main/cleanup.sh" -O /sbin/cleanup.sh && chmod +x /sbin/cleanup.sh
-wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/sync-jam-dengan-bug/main/ttl" -O /sbin/ttl && chmod +x /sbin/ttl
 echo -e "Updating Binaries Selesai"
 }
