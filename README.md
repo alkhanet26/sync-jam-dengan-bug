@@ -18,7 +18,7 @@
   
 4. masukan di ``rc.local`` atau ``luci -> system - startup - local``
    ```
-   sh /sbin/jam.sh google.com
+   sh /sbin/jam google.com
    ```
 5. jika ingin melakukan restart tunnel dengan ``jam.sh`` dan sebelum nya ada pengecekan dulu koneksi dari ``modem`` ke ``bug`` yg dituju di crontabs ketikan di ``luci->system->schedule task``
    ```
