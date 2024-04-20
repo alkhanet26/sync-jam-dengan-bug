@@ -26,7 +26,7 @@
    ```
    ini artinya setiap 6 jam sekali ``ping.sh`` dijalanin untuk mengecek koneksi internet jika tidak ada replya maka ``jam.sh`` dijalankan restart tunnel
 6. Untuk mencari domain bug yang cocok silahkan ketik dulu di terminal ``curl -i www.bugdomain.com`` atau ``curl -i www.bugdomain.com:443`` atau bug ip ``curl -i bug_ip:443``
-   ex : ``curl -i time.google.com`` lihat jika ada respon date maka domain tersebut bisa dipakai
+   ex : ``curl -i time.google.com`` lihat jika ada respon date maka domain tersebut bisa dipakai tetapi pastikan semua tunnel off / disable
    ![image](https://user-images.githubusercontent.com/92195275/207335985-73199713-f1fd-4758-9ac5-d66a42966926.png)
    
 7. Untuk pengguna ``Openclash`` ada pengaturan khusus ``config`` ``terminal``
