@@ -4,5 +4,4 @@
 {
 sync && echo 3 > /proc/sys/vm/drop_caches
 rm -r /tmp/luci*
-/etc/init.d/zerotier restart
 }
